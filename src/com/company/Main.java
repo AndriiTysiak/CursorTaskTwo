@@ -8,9 +8,10 @@ public class Main {
     public static void main(String[] args) {
         //1. Заповнити масив тільки парними числами
         int[] arrayOne = new int[30];
-        for (int i = 2; i < arrayOne.length; i = i + 2) {
-            arrayOne[i] = i;
-            System.out.println(arrayOne[i]);
+        for (int i = 0; i < arrayOne.length; i++) {
+                arrayOne[i] = i*2;
+                System.out.println(arrayOne[i]);
+
         }
         System.out.println("Масив з парних чисел:\n" + Arrays.toString(arrayOne) + "\n");
 
@@ -28,7 +29,7 @@ public class Main {
         //3. Вивести середнє значення масиву
         int sum = 0;
         for (int i = 0; i < arrayOne.length; i++) {
-            sum += i;
+            sum += arrayOne[i];
         }
         System.out.println("Середнє значення масиву arrayOne:\n" + sum / arrayOne.length + "\n");
         //Вивести суму всіх значень кратних 3
@@ -111,7 +112,7 @@ public class Main {
          * ну і відповідно коли рядом парний і не парний то також міняє*/
 
         for (int i = 0; i < arrayRandom.length; i += 2) {
-            if (arrayRandom[i] % 2 == 0) {
+            if (arrayRandom[i] % 2 == 0 ) {
                 temp = arrayRandom[i + 1];
                 arrayRandom[i + 1] = arrayRandom[i];
                 arrayRandom[i] = temp;
